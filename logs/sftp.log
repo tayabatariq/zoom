@@ -1,0 +1,6 @@
+Jul 23 20:40:52 10.71.56.0 a2501461 Connection from 10.71.56.0 port 18932 on 82.165.90.117 port 22 rdomain ""
+Jul 23 20:40:56 10.71.56.0 a2501461 Accepted password for a2501461 from 10.71.56.0 port 18932 ssh2
+Jul 23 20:40:56 10.71.56.0 a2501461 Starting session: subsystem 'sftp' for a2501461 from 10.71.56.0 port 18932 id 0
+Jul 23 20:40:56 10.71.56.0 a2501461 session opened for local user a2501461 from [10.71.56.0]
+Jul 23 22:18:56 10.71.56.0 a2501461 Connection closed by 10.71.56.0 port 18932
+Jul 23 22:18:56 10.71.56.0 a2501461 session closed for local user a2501461 from [10.71.56.0]

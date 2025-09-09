@@ -1,0 +1,577 @@
+/********** Template CSS **********/
+:root {
+  --primary: #d81324;
+  --secondary: #0b2154;
+  --light: #f2f2f2;
+  --dark: #111111;
+}
+
+.fw-medium {
+  font-weight: 600 !important;
+}
+.accordion {
+  background-color: #d81324;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.mockTestText {
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.mockTextList {
+  padding-left: 10px;
+}
+
+.mockTextList {
+  padding-left: 40px;
+}
+
+.mockTextList li {
+  font-size: 24px !important;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 45px;
+  bottom: 45px;
+  z-index: 99;
+}
+
+/*** Spinner ***/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+/*** Button ***/
+.btn {
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+  color: #ffffff;
+}
+
+.btn-square {
+  width: 38px;
+  height: 38px;
+}
+
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-lg-square {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  border-radius: 2px;
+}
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+  border: none;
+  content: '\f107';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  margin-right: 30px;
+  padding: 25px 0;
+  color: #ffffff;
+  font-size: 13px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-light .navbar-nav .nav-link {
+    margin-right: 0;
+    padding: 10px 0;
+  }
+
+  .navbar-light .navbar-nav {
+    border-top: 1px solid #eeeeee;
+  }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+  height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+  top: -100px;
+  transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    border: none;
+    margin-top: 0;
+    top: 150%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  .navbar .nav-item:hover .dropdown-menu {
+    top: 100%;
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+  }
+}
+
+/*** Header ***/
+.carousel-caption {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (max-width: 768px) {
+  #header-carousel .carousel-item {
+    position: relative;
+    min-height: 450px;
+  }
+
+  #header-carousel .carousel-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.page-header {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-header-inner {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--light);
+}
+
+/*** Facts ***/
+.fact {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/carousel-bg-1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*** Service ***/
+.service .nav .nav-link {
+  background: var(--light);
+  transition: 0.5s;
+}
+
+.service .nav .nav-link.active {
+  background: var(--primary);
+}
+
+.service .nav .nav-link.active h4 {
+  color: #ffffff !important;
+}
+
+/*** Booking ***/
+.booking {
+  /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/carousel-bg-2.jpg) center center no-repeat;
+  background-size: cover; */
+}
+
+.bootstrap-datetimepicker-widget.bottom {
+  top: auto !important;
+}
+
+.bootstrap-datetimepicker-widget .table * {
+  border-bottom-width: 0px;
+}
+
+.bootstrap-datetimepicker-widget .table th {
+  font-weight: 500;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+  background: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+  border-bottom-color: var(--primary);
+}
+
+/*** Team ***/
+.team-item .team-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.team-item:hover .team-overlay {
+  transform: scale(1);
+}
+
+.team-item .team-overlay .btn {
+  color: var(--primary);
+  background: #ffffff;
+}
+
+.team-item .team-overlay .btn:hover {
+  color: #ffffff;
+  background: var(--secondary);
+}
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-item .testimonial-text,
+.testimonial-carousel .owl-item.center .testimonial-text * {
+  transition: 0.5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+  background: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+  color: #ffffff !important;
+}
+
+.testimonial-carousel .owl-dots {
+  margin-top: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #cccccc;
+  transition: 0.5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/*** Footer ***/
+.footer {
+  background: black,
+  
+}
+
+.footer .btn.btn-social {
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  border: 1px solid #ffffff;
+  border-radius: 35px;
+  transition: 0.3s;
+}
+
+.footer .btn.btn-social:hover {
+  color: var(--primary);
+}
+
+.footer .btn.btn-link {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.footer .btn.btn-link::before {
+  position: relative;
+  content: '\f105';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+.footer .copyright {
+  padding: 25px 0;
+  font-size: 15px;
+  border-top: 1px solid rgba(256, 256, 256, 0.1);
+}
+
+.footer .copyright a {
+  color: var(--light);
+}
+
+.footer .footer-menu a {
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer .footer-menu a:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
+
+/* Gallery and modal styles */
+.gallery-img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Ensure all gallery card images show full content without cropping */
+.card-img-top {
+  object-fit: contain !important;
+}
+.nav-tabs .nav-link.active {
+  background-color: #000;
+  color: #fff;
+  border-color: #000 #000 #fff;
+}
+.nav-tabs .nav-link {
+  color: #000;
+}
+.nav-tabs .nav-link:hover {
+  background: transparent;
+  color: #d90429;
+}
+.nav-pills .nav-link.active {
+  background-color: #d90429 !important;
+  color: #fff !important;
+}
+.nav-pills .nav-link {
+  color: #d90429;
+  border-radius: 0;
+}
+/* .nav-pills .nav-link:hover {
+  background: transparent !important;
+  color: #d90429 !important;
+} */
+.modal-dialog {
+  max-width: 800px;
+}
+.modal-body {
+  padding: 0;
+}
+#videoModal .modal-dialog {
+  max-width: 90vw;
+  width: auto;
+  margin: 0 auto;
+}
+#videoModal .modal-content {
+  background: #000;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+#videoModal .modal-body {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+#modalVideo {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+  background: #000;
+}
+#videoModal .custom-close-x {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  z-index: 3000;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#videoModal .custom-close-x svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  stroke-width: 2.5;
+}
+#videoModal .btn-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2000;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  opacity: 1;
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+#videoModal .btn-close:focus {
+  outline: none;
+  box-shadow: none;
+}
+#videoModal .modal-header {
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  min-height: 0;
+  background: transparent;
+}
+#videoModal .modal-title {
+  display: none;
+}
+
+/* Special style for the first attempt winner card */
+.first-attempt-winner-card {
+  border: 2px solid #d81324;
+  box-shadow: 0 4px 24px rgba(216, 19, 36, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+.first-attempt-winner-card .card-img-top {
+  height: 240px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #f8f9fa 60%, #ffeaea 100%);
+  border-bottom: 1px solid #eee;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(216, 19, 36, 0.07);
+}
+
+.first-attempt-winner-card .card-body {
+  padding: 1.1rem 1rem 1rem 1rem;
+}
+
+.first-attempt-winner-card .card-text {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.video-caption {
+  font-size: 1.05rem;
+  color: #222;
+  text-align: center;
+  font-weight: 500;
+  background: #fff7f7;
+  border-radius: 0 0 8px 8px;
+  padding: 0.5rem 0.5rem 0.7rem 0.5rem;
+}
+
+.gallery-video {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  background: #f8f9fa;
+  border-radius: 8px;
+  cursor: pointer;
+}
