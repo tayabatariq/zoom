@@ -56,10 +56,108 @@
     .zoomdrivepara {
       font-size: 1.2rem;
     }
+    
   </style>
+  
+<style>
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px;
+    right: 35px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    /* box-shadow: 2px 2px 3px #999; */
+    z-index: 100;
+
+  }
+
+  .whatsapp-float i {
+    margin-top: 16px;
+  }
+
+  .whatsapp-float:hover {
+    background-color: #1ebe5c;
+    color: white;
+    
+  }
+  .pricing-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #e30613; /* Zoom Drive red */
+  margin-bottom: 10px;
+}
+
+.pricing-subtitle {
+  font-size: 18px;
+  color: #1b2a49; /* dark navy blue */
+  margin-bottom: 40px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.pricing-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1b2a49;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: bold;
+  color: #e30613;
+  margin: 10px 0;
+}
+
+.price span {
+  font-size: 16px;
+  color: #555;
+}
+
+.details {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+</style>
+
+<!-- WhatsApp Floating Icon End -->
 </head>
 
 <body>
+  <!-- WhatsApp Floating Icon Start -->
+<a href="https://wa.me/447725023726" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
   <!-- Spinner Start -->
   <div id="spinner"
     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -583,6 +681,65 @@
     </div>
   </div>
   <!-- Booking End -->
+
+
+ <section id="pricing" class="pricing-section">
+  <div class="container">
+    <h2 class="pricing-title">Lesson Prices</h2>
+    <p class="pricing-subtitle">Special offer for College and University students (valid student ID required)</p>
+
+    <div class="pricing-grid">
+      <!-- Student Offer -->
+      <div class="pricing-card">
+        <h3>Pay As You Go</h3>
+        <p class="price">£33 <span>/ hour</span></p>
+        <p class="details">Each lesson is a <b>2 hour minimum</b><br>Automatic or Manual<br><b>College & University students only</b></p>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Block Booking</h3>
+        <p class="price">£310 <span>/ 10 hours</span></p>
+        <p class="details">Each lesson is a <b>2 hour minimum</b><br>Automatic or Manual<br><b>College & University students only</b></p>
+      </div>
+
+      <!-- Regular Price -->
+      <div class="pricing-card">
+        <h3>Pay As You Go</h3>
+        <p class="price">£35 <span>/ hour</span></p>
+        <p class="details">Each lesson is a <b>2 hour minimum</b><br>Automatic or Manual</p>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Block Booking</h3>
+        <p class="price">£330 <span>/ 10 hours</span></p>
+        <p class="details">Each lesson is a <b>2 hour minimum</b><br>Automatic or Manual</p>
+      </div>
+    </div>
+
+    <h2 class="pricing-title mt-5">Intensive Courses</h2>
+    <p class="pricing-subtitle">Same Price for Automatic & Manual</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>6 Hour Course</h3>
+        <p class="price">£380</p>
+      </div>
+      <div class="pricing-card">
+        <h3>10 Hour Course</h3>
+        <p class="price">£620</p>
+      </div>
+      <div class="pricing-card">
+        <h3>20 Hour Course</h3>
+        <p class="price">£1220</p>
+      </div>
+      <div class="pricing-card">
+        <h3>30 Hour Course</h3>
+        <p class="price">£1820</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Testimonial Start -->
   <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
