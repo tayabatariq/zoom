@@ -67,6 +67,65 @@
 
 }
     </style>
+     <style>
+    body { background:#f9f9f9; font-family: Arial, sans-serif; }
+    h2 { color:#c1121f; font-weight: bold; }
+    .section { padding:60px 0; }
+    .bg-light-red { background:#fff5f5; }
+    .bg-soft { background:#f0f4f8; }
+    .highlight-box { background:#fff; padding:30px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+  </style>
+  
+<style>
+.custom-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+.custom-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.bg-light-red {
+  background-color: #ffe6e6 !important;
+}
+</style>
+<style>
+.tip-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+.tip-card .icon {
+  font-size: 2rem;
+  color: #d9534f; /* nice red tone */
+  margin-bottom: 10px;
+  display: block;
+}
+.tip-card p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+</style>
 </head>
 
 <body>
@@ -188,6 +247,7 @@
           <a href="contact.html" class="nav-item nav-link">Contact</a>
           <a href="Gallery.html" class="nav-item nav-link">Gallery</a>
           <a href="blog.html" class="nav-item nav-link">Blogs</a>
+          
 
         </div>
         <a
@@ -204,12 +264,12 @@
     <div class="container-fluid page-header bg-dark mb-5 p-0">
         <div class="container-fluid page-header-inner py-5">
             <div class="container text-center">
-                <h1 class="display-3 text-white mb-3 animated slideInDown">Contact</h1>
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Blog</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center text-uppercase">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Blog</li>
                     </ol>
                 </nav>
             </div>
@@ -218,49 +278,164 @@
     <!-- Page Header End -->
 
 
-    <!-- Contact Start -->
-    <div class="container-xxl Book your driving lessons">
-        <div class="container">
-            <div class="text-center wExplore Our Servicesow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-primary text-uppercase">// Contact Us //</h6>
-                <h1 class="mb-5">Contact For Any Query</h1>
-            </div>
-            <div class="row ">
-                <div class="col-12">
-                    <div class="row gy-4">
-                        <div class="col-md-4">
-                            <div class="bg-light d-flex flex-column justify-content-center p-4">
-                                <h5 class="text-uppercase">// Booking //</h5>
-                                <p class="m-0"><i class="fa fa-envelope-open text-primary me-2"></i>info@zoomdrive.uk
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="bg-light d-flex flex-column justify-content-center p-4">
-                                <h5 class="text-uppercase">// General //</h5>
-                                <p class="m-0"><i class="fa fa-envelope-open text-primary me-2"></i>info@zoomdrive.co.uk
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="bg-light d-flex flex-column justify-content-center p-4">
-                                <h5 class="text-uppercase">// Technical //</h5>
-                                <p class="m-0"><i
-                                        class="fa fa-envelope-open text-primary me-2"></i>anique@imperiummedia.org.uk
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  
+    <div class="container text-center py-2">
+    <h1 class="fw-bold " style="color: #c1121f;">Driving School Blogs</h1>
+    <p class="text-muted">Helpful tips & guides for learners and new drivers in the UK</p>
+  </div>
 
-                <div class="col-md-6">
-                    <script src="https://wzlvmire.formester.com/widget/standard.js" type="module"></script>
+  <section class="section">
+  <div class="container">
+    <div class="row g-4"><!-- g-4 = gap between cards -->
 
-                    <formester-standard-form set-auto-height="true" height="100%" id="ITNozo3NlBt-"
-                        url="https://wzlvmire.formester.com/f/ITNozo3NlBt-"></formester-standard-form>
+      <!-- Section 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="custom-card">
+          <h2 class="card-title">Which Countries’ Licences Can You Exchange in the UK?</h2>
+          <p>If you’ve moved to the UK, you may exchange your foreign driving licence depending on your country. Licences from EU/EEA, Australia, Canada, New Zealand, South Africa, Switzerland and a few others are accepted. Always check the latest DVLA rules before applying. This process saves time and ensures legal compliance.</p>
+        </div>
+      </div>
 
-                </div>
-                <!-- Contact End -->
+      <!-- Section 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="custom-card  text-center">
+          <h2 class="card-title">Benefits of Doing Intensive Driving Courses</h2>
+          <p class="mt-3">Intensive driving courses allow you to learn and pass your test faster—often in just 1–2 weeks. They are ideal if you’re short on time or need a licence urgently. These courses improve focus, reduce long gaps between lessons, and build confidence on the road.</p>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="col-12 col-md-12 col-lg-4">
+        <div class="custom-card">
+          <h2 class="card-title">Benefits of Learning to Drive</h2>
+          <p>Driving gives you independence, flexibility, and better job opportunities. It saves time compared to public transport and provides freedom to travel anywhere. Beyond convenience, learning to drive builds confidence and is a lifelong skill.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Section 4 (Split list style) -->
+  <section class="section bg-soft">
+    <div class="container">
+      <h2 class="text-center">What to Do If You Get Involved in a Car Accident</h2>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <ul>
+            <li>Stay calm and check for injuries</li>
+            <li>Call emergency services if needed</li>
+            <li>Exchange details with other drivers</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>Take photos of the scene</li>
+            <li>Inform your insurance provider</li>
+            <li>Never admit fault at the scene</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Section 5 (Grid of text boxes - Improved UI) -->
+<section class="section">
+  <div class="container">
+    <h2 class="text-center mb-5">Top Safety Tips for New Drivers</h2>
+    <div class="row g-4">
+      
+      <!-- Tip 1 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="tip-card">
+         <i class="fas fa-user-shield icon" style="color: #c1121f;"></i> <!-- FIXED ICON -->
+          <p>Always wear your seatbelt</p>
+        </div>
+      </div>
+
+      <!-- Tip 2 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="tip-card">
+          <i class="fas fa-mobile-alt icon" style="color: #c1121f;"></i>
+          <p>Avoid distractions like phones</p>
+        </div>
+      </div>
+
+      <!-- Tip 3 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="tip-card">
+          <i class="fas fa-car-side icon" style="color: #c1121f;"></i>
+          <p>Keep a safe distance from vehicles</p>
+        </div>
+      </div>
+
+      <!-- Tip 4 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="tip-card">
+          <i class="fas fa-cloud-showers-heavy icon" style="color: #c1121f;"></i>
+          <p>Adjust speed in poor weather</p>
+        </div>
+      </div>
+
+      <!-- Tip 5 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="tip-card">
+          <i class="fas fa-bed icon" style="color: #c1121f;"></i>
+          <p>Never drive when tired</p>
+        </div>
+      </div>
+
+      <!-- Tip 6 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="tip-card">
+          <i class="fas fa-shield-alt icon" style="color: #c1121f;"></i>
+          <p>Practice defensive driving</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- Section 6 (Accordion style) -->
+  <section class="section bg-light-red">
+    <div class="container">
+      <h2 class="text-center mb-4">How to Stay Calm and Confident During Your Driving Test</h2>
+      <div class="accordion" id="calmTips">
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tip1">Practice regularly</button></h2>
+          <div id="tip1" class="accordion-collapse collapse show" data-bs-parent="#calmTips">
+            <div class="accordion-body" style="color: black;">Confidence comes from preparation. The more you practice, the calmer you’ll be.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tip2">Breathe and relax</button></h2>
+          <div id="tip2" class="accordion-collapse collapse" data-bs-parent="#calmTips">
+            <div class="accordion-body" style="color: black;">Deep breathing before the test helps release stress and calm nerves.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tip3">Think positive</button></h2>
+          <div id="tip3" class="accordion-collapse collapse" data-bs-parent="#calmTips">
+            <div class="accordion-body" style="color: black;">Remember: the examiner wants you to pass. Stay positive and drive safely.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7 (Highlight box style) -->
+  <section class="section">
+    <div class="container">
+      <div class="highlight-box">
+        <h2>Tips on Passing Your Driving Test</h2>
+        <p>✔ Practice all manoeuvres carefully</p>
+        <p>✔ Revise “show me, tell me” questions</p>
+        <p>✔ Take a mock test with your instructor</p>
+        <p>✔ Arrive early at the test centre</p>
+        <p>✔ Stay calm—small mistakes don’t mean automatic failure</p>
+      </div>
+    </div>
+  </section>
 
 
                 <!-- Footer Start -->
