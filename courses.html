@@ -58,6 +58,96 @@
             margin: 20px 0;
         }
     </style>
+     <style>
+    :root{
+      --card-red: #d90429; /* main red */
+      --card-red-dark: #c5322f;
+      --accent: #f7c948;
+    }
+
+    body{
+      background: #fff;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .pricing-card {
+      background: linear-gradient(180deg, var(--card-red) 0%, var(--card-red-dark) 100%);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      min-height: 220px;
+    }
+
+    /* keep all cards same height and align content */
+    .pricing-card .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.6rem;
+    }
+
+    .small-note {
+      font-size: 0.85rem;
+      font-weight: 600;
+      opacity: 0.95;
+      text-transform: none;
+      margin-bottom: 0.25rem;
+      text-align: center;
+    }
+
+    .price {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin: 0.2rem 0 0.4rem;
+    }
+
+    .deposit {
+      font-size: 0.95rem;
+      text-align: center;
+      margin-bottom: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .deposit strong { font-weight: 800; }
+
+    .btn-book {
+      display: inline-block;
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      width: 100%;
+      padding: 0.55rem 0;
+      border-radius: 3px;
+      background: #d90429;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: background .14s ease, transform .06s ease;
+    }
+    .btn-book:hover{
+      background: #d40527;
+      transform: translateY(-1px);
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* optional: smaller devices spacing tweak */
+    @media (max-width: 575.98px){
+      .price { font-size: 1.8rem; }
+      .small-note { font-size: 0.8rem; }
+    }
+     h1.section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 2.5rem;
+      color: #d63a36;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 
 <body>
@@ -307,6 +397,142 @@
     <!-- Service End -->
 
 
+     <div class="container py-5">
+         <h1 class="section-title">Prices</h1>
+    <div class="row g-4">
+
+      <!-- Repeat this col for each card. Use col-sm-6 col-md-4 for 3 columns on md+ -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card pricing-card h-100">
+          <div class="card-body">
+            <div>
+              <div class="small-note">5 hours for £390</div>
+              <div class="price">£390</div>
+              <div class="deposit">Secure your booking with a deposit of <strong>£220</strong></div>
+            </div>
+
+            <a href="#" class="btn-book">BOOK NOW</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card pricing-card h-100">
+          <div class="card-body">
+            <div>
+              <div class="small-note">10 hours for £585</div>
+              <div class="price">£585</div>
+              <div class="deposit">Secure your booking with a deposit of <strong>£250</strong></div>
+            </div>
+
+            <a href="#" class="btn-book">BOOK NOW</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card pricing-card h-100">
+          <div class="card-body">
+            <div>
+              <div class="small-note">15 hours for £760</div>
+              <div class="price">£760</div>
+              <div class="deposit">Secure your booking with a deposit of <strong>£270</strong></div>
+            </div>
+
+            <a href="#" class="btn-book">BOOK NOW</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 2 -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card pricing-card h-100">
+          <div class="card-body">
+            <div>
+              <div class="small-note">20 hours for £905</div>
+              <div class="price">£905</div>
+              <div class="deposit">Secure your booking with a deposit of <strong>£270</strong></div>
+            </div>
+
+            <a href="#" class="btn-book">BOOK NOW</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card pricing-card h-100">
+          <div class="card-body">
+            <div>
+              <div class="small-note">25 hours for £1035</div>
+              <div class="price">£1035</div>
+              <div class="deposit">Secure your booking with a deposit of <strong>£250</strong></div>
+            </div>
+
+            <a href="#" class="btn-book">BOOK NOW</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card pricing-card h-100">
+          <div class="card-body">
+            <div>
+              <div class="small-note">30 hours for £1155</div>
+              <div class="price">£1155</div>
+              <div class="deposit">Secure your booking with a deposit of <strong>£250</strong></div>
+            </div>
+
+            <a href="#" class="btn-book">BOOK NOW</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 3 -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card pricing-card h-100">
+          <div class="card-body">
+            <div>
+              <div class="small-note">35 hours for £1299</div>
+              <div class="price">£1299</div>
+              <div class="deposit">Secure your booking with a deposit of <strong>£250</strong></div>
+            </div>
+
+            <a href="#" class="btn-book">BOOK NOW</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card pricing-card h-100">
+          <div class="card-body">
+            <div>
+              <div class="small-note">40 hours for £1475</div>
+              <div class="price">£1475</div>
+              <div class="deposit">Secure your booking with a deposit of <strong>£270</strong></div>
+            </div>
+
+            <a href="#" class="btn-book">BOOK NOW</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card pricing-card h-100">
+          <div class="card-body">
+            <div>
+              <div class="small-note">45 hours for £1630</div>
+              <div class="price">£1630</div>
+              <div class="deposit">Secure your booking with a deposit of <strong>£250</strong></div>
+            </div>
+
+            <a href="#" class="btn-book">BOOK NOW</a>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- row -->
+  </div> <!-- container -->
+
     <!-- Team Start -->
 
     <div class="container-xxl py-5">
@@ -324,19 +550,19 @@
                 <!-- Course 1 -->
                 <div class="col-lg-12 col-md-12">
                     <div class="team-item">
-                        <!-- <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden">
             <img class="img-fluid courseimg" src="homecarosal.png" alt="" />
            
-          </div> -->
+          </div>
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">6-Hour Intensive Driving Course</h5>
+                            <!-- <h5 class="fw-bold mb-0">6-Hour Intensive Driving Course</h5> -->
                             <br />
-                            <h3 class="fw-bold mb-0">£ 380</h3>
+                            <h3 class="fw-bold mb-0">Manual £ 380</h3>
                             <br />
-                            <h5>
+                            <!-- <h5>
                                 Local Instructor <br /><br />
                                 2-6 weeks<br /><br />
-                            </h5>
+                            </h5> -->
                             <h3 class="fw-bold mb-0">Automatic - £ 380</h3>
                             <br />
                             <p class="mb-0">
@@ -370,14 +596,14 @@
             
           </div> -->
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">10-Hour Intensive Driving Course</h5>
+                            <!-- <h5 class="fw-bold mb-0">10-Hour Intensive Driving Course</h5> -->
                             <br />
-                            <h3 class="fw-bold mb-0">£ 575</h3>
+                            <h3 class="fw-bold mb-0"> Manual £ 575</h3>
                             <br />
-                            <h5>
+                            <!-- <h5>
                                 Local Instructor<br /><br />
                                 2-6 Weeks <br /><br />
-                            </h5>
+                            </h5> -->
                             <h3 class="fw-bold mb-0">Automatic - £575</h3>
                             <br />
                             <p class="mb-0">
@@ -410,14 +636,14 @@
            
           </div> -->
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">15-Hour Intensive Driving Course</h5>
+                            <!-- <h5 class="fw-bold mb-0">15-Hour Intensive Driving Course</h5> -->
                             <br />
-                            <h3 class="fw-bold mb-0">£ 750</h3>
+                            <h3 class="fw-bold mb-0">Manual £ 750</h3>
                             <br />
-                            <h5>
+                            <!-- <h5>
                                 Local Instructor<br /><br />
                                 2-6 Weeks <br /><br />
-                            </h5>
+                            </h5> -->
                             <h3 class="fw-bold mb-0">Automatic - £750</h3>
                             <br />
                             <p class="mb-0">
@@ -453,14 +679,14 @@
                             </div>
                         </div> -->
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">20-Hour Intensive Driving Course</h5>
+                            <!-- <h5 class="fw-bold mb-0">20-Hour Intensive Driving Course</h5> -->
                             <br />
-                            <h3 class="fw-bold mb-0">£ 895</h3>
+                            <h3 class="fw-bold mb-0">Manual £ 895</h3>
                             <br />
-                            <h5>
+                            <!-- <h5>
                                 Local Instructor<br /><br />
                                 2-6 Weeks <br /><br />
-                            </h5>
+                            </h5> -->
                             <h3 class="fw-bold mb-0">Automatic - £895</h3>
                             <br />
                             <p class="mb-0">
