@@ -58,96 +58,246 @@
             margin: 20px 0;
         }
     </style>
-     <style>
-    :root{
-      --card-red: #d90429; /* main red */
-      --card-red-dark: #c5322f;
-      --accent: #f7c948;
-    }
+    <style>
+        :root {
+            --card-red: #d90429;
+            /* main red */
+            --card-red-dark: #c5322f;
+            --accent: #f7c948;
+        }
 
-    body{
-      background: #fff;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-    }
+        body {
+            background: #fff;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+        }
 
-    .pricing-card {
-      background: linear-gradient(180deg, var(--card-red) 0%, var(--card-red-dark) 100%);
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      min-height: 220px;
-    }
+        /* .. */
+        .prices-wrapper {
+            display: flex;
+            gap: 20px;
+        }
 
-    /* keep all cards same height and align content */
-    .pricing-card .card-body {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 1.6rem;
-    }
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            background: #fff;
+            border-right: 5px solid #d90429;
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+        }
 
-    .small-note {
-      font-size: 0.85rem;
-      font-weight: 600;
-      opacity: 0.95;
-      text-transform: none;
-      margin-bottom: 0.25rem;
-      text-align: center;
-    }
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #333;
+            transition: all 0.3s ease;
+        }
 
-    .price {
-      font-size: 2.2rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-align: center;
-      margin: 0.2rem 0 0.4rem;
-    }
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: #d90429;
+            color: #fff;
+        }
 
-    .deposit {
-      font-size: 0.95rem;
-      text-align: center;
-      margin-bottom: 0.9rem;
-      line-height: 1.4;
-    }
+        /* Content */
+        .prices-content {
+            flex: 1;
+        }
 
-    .deposit strong { font-weight: 800; }
+        .price-section {
+            margin-bottom: 50px;
+            /* spacing between sections */
+        }
 
-    .btn-book {
-      display: inline-block;
-      text-align: center;
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      width: 100%;
-      padding: 0.55rem 0;
-      border-radius: 3px;
-      background: #d90429;
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: background .14s ease, transform .06s ease;
-    }
-    .btn-book:hover{
-      background: #d40527;
-      transform: translateY(-1px);
-      text-decoration: none;
-      color: #fff;
-    }
+        /* Cards layout: 3 per row */
+        .price-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-    /* optional: smaller devices spacing tweak */
-    @media (max-width: 575.98px){
-      .price { font-size: 1.8rem; }
-      .small-note { font-size: 0.8rem; }
-    }
-     h1.section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 2.5rem;
-      color: #d63a36;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-  </style>
+        .price-card {
+            flex: 1 1 calc(33.333% - 20px);
+            background: linear-gradient(180deg, #d90429 0%, #c5322f 100%);
+            color: #fff;
+            padding: 20px;
+            text-align: left;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .price-card .big {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .price-card p {
+            font-size: 0.95rem;
+            margin: 0 0 4px;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 20px 0 15px;
+        }
+
+        /* Red divider after cards */
+        .section-divider {
+            border-top: 5px solid #d90429;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Sidebar active state */
+        .sidebar a.active {
+            background: #d90429;
+            color: #fff;
+        }
+
+
+        /* .. */
+        .deposit {
+            font-size: 0.95rem;
+            text-align: center;
+            margin-bottom: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .deposit strong {
+            font-weight: 800;
+        }
+
+        .btn-book {
+            display: inline-block;
+            text-align: center;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            width: 100%;
+            padding: 0.55rem 0;
+            border-radius: 3px;
+            background: #d90429;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: background .14s ease, transform .06s ease;
+        }
+
+        .btn-book:hover {
+            background: #d40527;
+            transform: translateY(-1px);
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* optional: smaller devices spacing tweak */
+        @media (max-width: 575.98px) {
+            .price {
+                font-size: 1.8rem;
+            }
+
+            .small-note {
+                font-size: 0.8rem;
+            }
+        }
+
+        h1.section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #d63a36;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .img-card {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
+            padding: 0 267px;
+        }
+        .prices-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+/* Sidebar style */
+.sidebar {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar a.active {
+  background: #d40527;
+  color: #fff;
+}
+
+/* Main content style */
+.prices-content {
+  flex: 1;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+  .prices-wrapper {
+    flex-direction: column;
+  }
+  .price-cards{
+    flex-direction: column;
+  }
+  .courseimg{
+    width: 100% !important;
+    /* height: 80vh !important; */
+    object-fit: cover !important;
+  }
+  .img-card{
+    padding: .6rem !important;
+  }
+
+  .sidebar {
+    flex: unset;
+    order: -1; /* sidebar ko upar bhejne ke liye */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    position:  relative !important;
+    width: 100% !important;
+    top:  0 !important;
+  }
+
+  .sidebar a {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+}
+
+    </style>
 </head>
 
 <body>
@@ -206,7 +356,18 @@
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="areas.html" class="nav-item nav-link">Areas Covered</a>
-                <a href="courses.html" class="nav-item nav-link active">Courses</a>
+                 <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Prices</a>
+                    <div class="dropdown-menu fade-up m-0">
+
+                        <!-- Existing links -->
+                        <a href="courses.html" class="dropdown-item">
+                            Prices
+                        </a>
+                       
+
+                    </div>
+                </div>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Driving Material</a>
                     <div class="dropdown-menu fade-up m-0">
@@ -397,314 +558,142 @@
     <!-- Service End -->
 
 
-     <div class="container py-5">
-         <h1 class="section-title">Prices</h1>
-    <div class="row g-4">
-
-      <!-- Repeat this col for each card. Use col-sm-6 col-md-4 for 3 columns on md+ -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card pricing-card h-100">
-          <div class="card-body">
-            <div>
-              <div class="small-note">5 hours for £390</div>
-              <div class="price">£390</div>
-              <div class="deposit">Secure your booking with a deposit of <strong>£220</strong></div>
-            </div>
-
-            <a href="#" class="btn-book">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card pricing-card h-100">
-          <div class="card-body">
-            <div>
-              <div class="small-note">10 hours for £585</div>
-              <div class="price">£585</div>
-              <div class="deposit">Secure your booking with a deposit of <strong>£250</strong></div>
-            </div>
-
-            <a href="#" class="btn-book">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card pricing-card h-100">
-          <div class="card-body">
-            <div>
-              <div class="small-note">15 hours for £760</div>
-              <div class="price">£760</div>
-              <div class="deposit">Secure your booking with a deposit of <strong>£270</strong></div>
-            </div>
-
-            <a href="#" class="btn-book">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- row 2 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card pricing-card h-100">
-          <div class="card-body">
-            <div>
-              <div class="small-note">20 hours for £905</div>
-              <div class="price">£905</div>
-              <div class="deposit">Secure your booking with a deposit of <strong>£270</strong></div>
-            </div>
-
-            <a href="#" class="btn-book">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card pricing-card h-100">
-          <div class="card-body">
-            <div>
-              <div class="small-note">25 hours for £1035</div>
-              <div class="price">£1035</div>
-              <div class="deposit">Secure your booking with a deposit of <strong>£250</strong></div>
-            </div>
-
-            <a href="#" class="btn-book">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card pricing-card h-100">
-          <div class="card-body">
-            <div>
-              <div class="small-note">30 hours for £1155</div>
-              <div class="price">£1155</div>
-              <div class="deposit">Secure your booking with a deposit of <strong>£250</strong></div>
-            </div>
-
-            <a href="#" class="btn-book">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- row 3 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card pricing-card h-100">
-          <div class="card-body">
-            <div>
-              <div class="small-note">35 hours for £1299</div>
-              <div class="price">£1299</div>
-              <div class="deposit">Secure your booking with a deposit of <strong>£250</strong></div>
-            </div>
-
-            <a href="#" class="btn-book">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card pricing-card h-100">
-          <div class="card-body">
-            <div>
-              <div class="small-note">40 hours for £1475</div>
-              <div class="price">£1475</div>
-              <div class="deposit">Secure your booking with a deposit of <strong>£270</strong></div>
-            </div>
-
-            <a href="#" class="btn-book">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card pricing-card h-100">
-          <div class="card-body">
-            <div>
-              <div class="small-note">45 hours for £1630</div>
-              <div class="price">£1630</div>
-              <div class="deposit">Secure your booking with a deposit of <strong>£250</strong></div>
-            </div>
-
-            <a href="#" class="btn-book">BOOK NOW</a>
-          </div>
-        </div>
-      </div>
-
-    </div> <!-- row -->
-  </div> <!-- container -->
-
-    <!-- Team Start -->
-
-    <div class="container-xxl py-5">
-        <div class="container">
-            <!-- Heading with animation -->
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-primary text-uppercase">
-                    Check Out Course Pricing Structure
-                </h6>
-                <h1 class="mb-5">// Our Courses //</h1>
-            </div>
-
-            <div class="row g-4">
-
-                <!-- Course 1 -->
-                <div class="col-lg-12 col-md-12">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
+    <div class="img-card">
+        <div class="position-relative overflow-hidden">
             <img class="img-fluid courseimg" src="homecarosal.png" alt="" />
-           
-          </div>
-                        <div class="bg-light text-center p-4">
-                            <!-- <h5 class="fw-bold mb-0">6-Hour Intensive Driving Course</h5> -->
-                            <br />
-                            <h3 class="fw-bold mb-0">Manual £ 380</h3>
-                            <br />
-                            <!-- <h5>
-                                Local Instructor <br /><br />
-                                2-6 weeks<br /><br />
-                            </h5> -->
-                            <h3 class="fw-bold mb-0">Automatic - £ 380</h3>
-                            <br />
-                            <p class="mb-0">
-                                Our 6-hour Intensive Driving Course is perfect for those looking to quickly gain
-                                confidence behind the wheel.
-                                <br /><br />Designed for learners who have some driving experience or need to brush up
-                                on key skills, this course allows you to focus on the areas where you need the most
-                                improvement.
-                                <br /><br />You’ll receive personalised lessons from an experienced instructor, and you
-                                can choose to add a Fast Track test date for quicker results (extra charges apply).
-                                <br /><br />This course is ideal for those with time constraints or anyone looking to
-                                prepare for their driving test in a short time.
-                                <br /><br />Suitable for someone who is either an experienced driver or has failed a
-                                driving test recently. It’s a 2–3-day course with practical test at the end.
-                            </p>
+        </div>
+    </div>
+    <h1 class="section-title">Prices</h1>
+    <div class="container py-5">
+        <div class="prices-wrapper">
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <a href="#discount" class="active">Manual & Automatic (Student Discount)</a>
+                <a href="#standard">Standard Pay As You Go</a>
+                <a href="#intensive">Intensive Courses</a>
+                <a href="#assessment">Assessment Lessons</a>
+            </div>
+
+            <!-- Main Content -->
+            <div class="prices-content">
+
+                <!-- Student Discount Section -->
+                <div id="discount" class="price-section">
+                    <h3 class="section-title">Manual & Automatic – Student Discount</h3>
+                    <div class="price-cards">
+                        <div class="price-card">
+                            <div class="big">2 Hours for £66</div>
+                            <p>Pay as you go for automatic & manual cars</p>
+                            <p>Special Discount for College & University Students</p>
+                            <p>2 Hour minimum booking</p>
+                        </div>
+                        <div class="price-card">
+                            <div class="big">10 Hours for £310</div>
+                            <p>Block Booking. Minimum hours: 10</p>
+                            <p>Special Discount for College & University Students</p>
+                            <p>2 Hour minimum booking</p>
                         </div>
                     </div>
+                    <div class="section-divider"></div>
                 </div>
 
-                <!-- Separator -->
-                <!-- Separator -->
-                <!-- <hr class="section-divider my-5" /> -->
-                <div class="divider"></div>
-
-
-                <!-- Course 2 -->
-                <div class="col-lg-12 col-md-12">
-                    <div class="team-item">
-                        <!-- <div class="position-relative overflow-hidden">
-            <img class="img-fluid courseimg" src="homecarosal.png" alt="" />
-            
-          </div> -->
-                        <div class="bg-light text-center p-4">
-                            <!-- <h5 class="fw-bold mb-0">10-Hour Intensive Driving Course</h5> -->
-                            <br />
-                            <h3 class="fw-bold mb-0"> Manual £ 575</h3>
-                            <br />
-                            <!-- <h5>
-                                Local Instructor<br /><br />
-                                2-6 Weeks <br /><br />
-                            </h5> -->
-                            <h3 class="fw-bold mb-0">Automatic - £575</h3>
-                            <br />
-                            <p class="mb-0">
-                                The 10-hour Intensive Driving Course is an excellent choice for learners who want to
-                                cover all essential aspects of driving in a short period.
-                                <br /><br />Whether you're a beginner or just need to refine your skills before your
-                                driving test, this course will give you the hands-on experience you need.
-                                <br /><br />You’ll be paired with a qualified instructor, and with the option to include
-                                a Fast Track Test Date, you can ensure you're fully prepared quickly (extra charges
-                                apply).
-                                <br /><br />Completed over 3-7 days for people with reasonably good driving experience
-                                looking to brush up on manoeuvres.
-                            </p>
+                <!-- Standard Section -->
+                <div id="standard" class="price-section">
+                    <h3 class="section-title">Manual & Automatic – Standard</h3>
+                    <div class="price-cards">
+                        <div class="price-card">
+                            <div class="big">2 Hours for £70</div>
+                            <p>Pay as you go for automatic & manual cars</p>
+                            <p>2 Hour minimum booking</p>
+                        </div>
+                        <div class="price-card">
+                            <div class="big">10 Hours for £330</div>
+                            <p>Block Booking. Minimum hours: 10</p>
+                            <p>2 Hour minimum booking</p>
                         </div>
                     </div>
+                    <div class="section-divider"></div>
                 </div>
 
-                <!-- Separator -->
-                <!-- Separator -->
-                <!-- <hr class="section-divider my-5" /> -->
-                <div class="divider"></div>
-
-
-
-                <!-- Course 3 -->
-                <div class="col-lg-12 col-md-12">
-                    <div class="team-item">
-                        <!-- <div class="position-relative overflow-hidden">
-            <img class="img-fluid courseimg" src="homecarosal.png" alt="" />
-           
-          </div> -->
-                        <div class="bg-light text-center p-4">
-                            <!-- <h5 class="fw-bold mb-0">15-Hour Intensive Driving Course</h5> -->
-                            <br />
-                            <h3 class="fw-bold mb-0">Manual £ 750</h3>
-                            <br />
-                            <!-- <h5>
-                                Local Instructor<br /><br />
-                                2-6 Weeks <br /><br />
-                            </h5> -->
-                            <h3 class="fw-bold mb-0">Automatic - £750</h3>
-                            <br />
-                            <p class="mb-0">
-                                The 15-hour Intensive Driving Course is designed to help you progress rapidly while
-                                still providing thorough guidance.
-                                <br /><br />Ideal for learners with around 20 hours of prior experience who have
-                                practised manoeuvres and are quick learners.
-                                <br /><br />You’ll be paired with a qualified instructor, and with the option to add a
-                                Fast Track Test Date, you can prepare effectively for your driving test (extra charges
-                                apply).
-                            </p>
+                <!-- Intensive Section -->
+                <div id="intensive" class="price-section">
+                    <h3 class="section-title">Intensive Courses for Automatic & Manual</h3>
+                    <div class="price-cards">
+                        <div class="price-card">
+                            <div class="big">5 Hours for £390</div>
+                            <p>2.5 Hour minimum booking</p>
+                            <p>Suitable for experienced drivers or those who failed a test recently. 2-3 day course with
+                                test at end.</p>
+                        </div>
+                        <div class="price-card">
+                            <div class="big">10 Hours for £585</div>
+                            <p>2 Hour minimum booking</p>
+                            <p>Completed over 3–7 days for drivers looking to brush up on manoeuvres.</p>
+                        </div>
+                        <div class="price-card">
+                            <div class="big">15 Hours for £760</div>
+                            <p>2 Hour minimum booking</p>
+                            <p>For learners with ~20 hours of experience & manoeuvres.</p>
+                        </div>
+                        <div class="price-card">
+                            <div class="big">20 Hours for £905</div>
+                            <p>2 Hour minimum booking</p>
+                            <p>For learners with ~15 hours of experience & manoeuvres.</p>
+                        </div>
+                        <div class="price-card">
+                            <div class="big">25 Hours for £1035</div>
+                            <p>2 Hour minimum booking</p>
+                            <p>For those with 5–10 hours experience.</p>
+                        </div>
+                        <div class="price-card">
+                            <div class="big">30 Hours for £1155</div>
+                            <p>2 Hour minimum booking</p>
+                            <p>For those with 5–10 hours experience.</p>
+                        </div>
+                        <div class="price-card">
+                            <div class="big">35 Hours for £1299</div>
+                            <p>2 Hour minimum booking</p>
+                            <p>For those with 5–10 hours experience.</p>
+                        </div>
+                        <div class="price-card">
+                            <div class="big">40 Hours for £1475</div>
+                            <p>2 Hour minimum booking</p>
+                            <p>Suitable for complete beginners.</p>
+                        </div>
+                        <div class="price-card">
+                            <div class="big">45 Hours for £1630</div>
+                            <p>2 Hour minimum booking</p>
+                            <p>Suitable for complete beginners.</p>
                         </div>
                     </div>
+                    <div class="section-divider"></div>
                 </div>
 
-                <!-- Separator -->
-                <!-- Separator -->
-                <!-- <hr class="section-divider my-5" /> -->
-                <div class="divider"></div>
-
-
-
-                <!-- Course 4 -->
-                <div class="col-lg-12 col-md-12">
-                    <div class="team-item">
-                        <!-- <div class="position-relative overflow-hidden">
-                            <img class="img-fluid courseimg" src="homecarosal.png" alt="" />
-                            <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
-                                <a href="https://wzlvmire.formester.com/f/ITNozo3NlBt-"
-                                    class="btn btn-primary py-3 px-5">
-                                    Book Now <i class="fa fa-arrow-right ms-3"></i>
-                                </a>
-                            </div>
-                        </div> -->
-                        <div class="bg-light text-center p-4">
-                            <!-- <h5 class="fw-bold mb-0">20-Hour Intensive Driving Course</h5> -->
-                            <br />
-                            <h3 class="fw-bold mb-0">Manual £ 895</h3>
-                            <br />
-                            <!-- <h5>
-                                Local Instructor<br /><br />
-                                2-6 Weeks <br /><br />
-                            </h5> -->
-                            <h3 class="fw-bold mb-0">Automatic - £895</h3>
-                            <br />
-                            <p class="mb-0">
-                                The 20-hour Intensive Driving Course is perfect for learners with around 15 hours of
-                                prior experience.
-                                <br /><br />This course helps you brush up on manoeuvres, build confidence, and prepare
-                                for your test effectively.
-                                <br /><br />You’ll work with an experienced instructor and have the option to add a Fast
-                                Track Test Date for quicker results (extra charges apply).
-                            </p>
+                <!-- Assessment Section -->
+                <div id="assessment" class="price-section">
+                    <h3 class="section-title">Assessment Lessons – Automatic & Manual</h3>
+                    <div class="price-cards">
+                        <div class="price-card">
+                            <div class="big">2 Hours for £80</div>
+                            <p>2 Hour minimum booking</p>
+                            <p>For drivers who want instructors to assess ability before practical test.</p>
                         </div>
                     </div>
+                    <div class="section-divider"></div>
                 </div>
 
             </div>
         </div>
     </div>
 
+    </div>
+    </div>
+
+    <!-- Team Start -->
+
+
+  
     <!-- Team End -->
 
 
@@ -803,6 +792,39 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <!-- prices -->
+    <script>
+        // Highlight active link on click
+        const sidebarLinks = document.querySelectorAll(".sidebar a");
+
+        sidebarLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                sidebarLinks.forEach(l => l.classList.remove("active"));
+                this.classList.add("active");
+            });
+        });
+
+        // Highlight based on scroll position
+        const sections = document.querySelectorAll(".price-section");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+            sidebarLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
