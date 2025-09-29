@@ -482,6 +482,9 @@ html, body { overflow-x: hidden; }
 .navbar-light a.btn {
   height: 75px;
 }
+.navbar-brand{
+  margin-bottom: 1rem ;
+}
 
 .navbar-light .navbar-nav .nav-link {
   color: var(--dark);
