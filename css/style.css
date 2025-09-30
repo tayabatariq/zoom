@@ -452,6 +452,9 @@ html, body { overflow-x: hidden; }
   vertical-align: middle;
   margin-left: 8px;
 }
+.navbar{
+  padding-top: 2rem !important;
+}
 
 .navbar-light .navbar-nav .nav-link {
   margin-right: 30px;
