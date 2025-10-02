@@ -53,19 +53,23 @@
         }
     });
     
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
+  // Back to top button
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+        $('.back-to-top').fadeIn('slow');
+    } else {
+        $('.back-to-top').fadeOut('slow');
+    }
+});
+
+$('.back-to-top').click(function () {
+    $('html, body').stop().animate(
+        { scrollTop: 0 },
+        800,   // ⬅ speed (0.8 second, tum 1000 ya 1200 bhi kar sakte ho)
+        'linear'  // ⬅ bilkul normal equal speed
+    );
+    return false;
+});
 
 
     // Facts counter
